@@ -98,6 +98,17 @@ nav#menu a:hover {
    color: #FFF;
 }
 
+/* SECTION - - - - - - - - - - - - - - - - - - */
+section#corpo {
+   display: block;
+   width: 520px;
+   padding-right: 15px;
+
+   float: left;
+
+   border-right: 1px solid #606060;
+}
+
 /* IMAGENS COM LEGENDA - - - - - - - - - - - - */
 figure.foto-legenda {
    position: relative;
@@ -126,4 +137,21 @@ figure.foto-legenda figcaption {
 }
 figure.foto-legenda:hover figcaption {
    opacity: 1;
+}
+
+/* ASIDE - - - - - - - - - - - - - - - - - - */
+aside#lateral {
+   display: block;
+   width: 350px;
+   float: right;
+}
+
+/* FOOTER - - - - - - - - - - - - - - - - - - */
+footer#rodape {
+   clear: both; /* É uma palavra-chave que indica que o elemento foi movido para baixo para liberar os últimos elementos flutuantes. */
+   border-top: 1px solid #606060;
+}
+
+footer#rodape p {
+   text-align: center;
 }
