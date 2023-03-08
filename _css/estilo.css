@@ -139,6 +139,48 @@ figure.foto-legenda:hover figcaption {
    opacity: 1;
 }
 
+table#tabelaspec {
+   border: 1px solid #606060;
+   border-spacing: 0px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+table#tabelaspec td {
+   border: 1px solid #606060;
+   padding: 10px;
+
+   text-align: center;
+   vertical-align: middle;
+}
+
+table#tabelaspec caption {
+   color: #888888;
+   font-size: 14pt;
+   font-weight: bold;
+}
+
+table#tabelaspec caption span {
+   display: block;
+   float: right;
+   color: #000;
+
+   font-size: 8pt;
+   margin-top: 10px;
+}
+
+table#tabelaspec td.coln-l {
+   color: #FFF;
+   background-color: #606060;
+   font-weight: bold;
+
+   vertical-align: top;
+}
+
+table#tabelaspec td.coln-d {
+   background-color: #cecece;
+}
+
 /* ASIDE - - - - - - - - - - - - - - - - - - */
 aside#lateral {
    display: block;
