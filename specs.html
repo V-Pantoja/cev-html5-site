@@ -11,7 +11,7 @@
 
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https: //fonts.googleapis.com/css2?family= Titillium +Web & display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -22,7 +22,7 @@
             <h2>A revolução do Google está chegando</h2> 
          </hgroup>
               
-         <img id="icone" src="_imagens/glass-oculos-preto-peq.png" alt="Imagem Óculos do Google">
+         <img id="icone" src="_imagens/img-menu/especificacoes.png" alt="Imagem Óculos do Google">
          
          <nav id="menu">
             <h1>Menu Principal</h1>
@@ -51,8 +51,22 @@
             <p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
             
             <section id="conteudo">
-               <img src="_imagens/glass-esquema-marcado.jpg" alt="">
-               <iframe src="google-glass.html" id="frame-spec" name="janela"></iframe>
+               <img src="_imagens/glass-esquema-marcado.jpg" alt="Óculos Google Glass com marcações" usemap="#meu-mapa">
+               <map name="meu-mapa">
+                  <area shape="rect" coords="179,202,270,260" href="google-glass.html#tela" alt="#" target="janela"> 
+                  <!-- A opção retangulo precisa ser informado as coordenadas x e y do ponto inicial e também do ponto final (xi, yi, xf, yf) -->
+
+                  <area shape="circle" coords="158,243,12" href="google-glass.html#camera" alt="#" target="janela">
+                  <area shape="circle" coords="73,52,12" href="google-glass.html#gadgets" alt="#" target="janela">
+                  <!-- O circulo precisa da coordenada x e y do ponto central e a medida do raio (x, y, raio)-->
+
+                  <area shape="poly" coords="28,143,83,216,84,249,27,169" href="google-glass.html#sensores" alt="#" target="janela">
+                  <!-- A forma poligonal pode ter muitos pontos, e então é necessário pegar a posição x e y de todos eles seguindo a ordem no sentido horário -->
+
+                  <!-- O target vai ser o local onde será mostrado o conteudo mapeado -->
+               </map>
+
+               <iframe src="google-glass.html" id="frame-spec" name="janela" scrolling="no"></iframe>
             </section>
          </article>
 
