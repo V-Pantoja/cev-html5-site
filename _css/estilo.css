@@ -120,7 +120,7 @@ nav#menu {
 section#corpo {
    display: block;
    width: 500px;
-   padding-right: 15px;
+   padding: 0 15px 15px 0;
 
    float: left;
 
@@ -232,6 +232,12 @@ table#tabelaspec {
    background-color: #cecece;
 }
 
+video#cFunciona {
+   display: block;
+   position: relative;
+   width: 100%;
+}
+
 /* ASIDE - - - - - - - - - - - - - - - - - - */
 aside#lateral {
    display: block;
@@ -255,6 +261,12 @@ aside#lateral {
    font-size: 13pt;
    color: #FFF;
    padding: 5px;
+}
+
+video#cNoticias {
+   display: block;
+   position: relative;
+   width: 100%;
 }
 
 /* FOOTER - - - - - - - - - - - - - - - - - - */
