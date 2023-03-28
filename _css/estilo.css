@@ -70,7 +70,7 @@ header#cabecalho {
 
 #cabecalho img#icone {
    position: absolute;
-   left: 1000px;
+   left: 1200px;
    top: 60px;
 }
 
@@ -85,7 +85,7 @@ nav#menu {
 
    position: absolute;
    top: -20px;
-   left: 530px;
+   left: 750px;
 }
 
 #menu li {
