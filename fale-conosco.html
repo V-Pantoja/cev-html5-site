@@ -48,7 +48,7 @@
             </header>
 
 						
-				<form method="post" id="fContato" action="#"> <!-- action (para onde será enviado os dados do formulário ex: mailto:contato@cursoemvideo.com) -->
+				<form method="post" id="fContato" action="#" oninput="calc_total();"> <!-- action (para onde será enviado os dados do formulário ex: mailto:contato@cursoemvideo.com) -->
 
 					<fieldset id="usuario">
 						<legend>Identificação do Usuário</legend>
@@ -84,7 +84,7 @@
 							</select>
 						</p>
 						
-						<p><label for="cCid">Cidade:</label> <input type="text" id="cCid" name="tCid" size="20" maxlength="40" placeholder="Cidade" list="cidades"></p>
+						<p><label for="cCid">Cidade:</label> <input type="text" id="cCid" name="tCid" size="20" maxlength="40" placeholder="Cidade" list="cidades" /></p>
 						<datalist id="cidades">
 							<option value="Rio de Janeiro"></option>
 							<option value="Nova Iguaçu"></option>
@@ -99,20 +99,22 @@
 							Min<input type="range" id="cUrg" name="tUrg" min="0" max="10" step="2"/>Max
 						</p>
 						<p><label for="cMsg">Mensagem:</label>
-							<textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea>
+							<textarea name="tMsg" id="cMsg" cols="30" rows="5" placeholder="Deixe aqui sua mensagem"></textarea>
 						</p>
 					</fieldset>
 
 					<fieldset id="pedido">
 						<legend>Quero um Google Glass</legend>
-						<p><label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label> <input type="text"></p>
-						<p><label for="cCor">Cor:</label> <input type="text"></p>
-						<p><label for="cQtd">Quantidade:</label> <input type="text"></p>
-						<p><label for="cTot">Preço Total: R$</label> <input type="text"></p>
+						<p>
+							<input type="checkbox" id="cPed" name="tPed" checked />
+							<label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label>
+						</p>
+						<p><label for="cCor">Cor:</label> <input type="color" value="#0000FF" /></p>
+						<p><label for="cQtd">Quantidade:</label> <input type="number" id="cQtd" name="tQtd" min="0" max="5" value="0" /></p>
+						<p><label for="cTot">Preço Total: R$</label> <input type="text" id="cTot" name="tTot" placeholder="Total a Pagar" readonly /></p>
 					</fieldset>
 
-					[BOTÃO ENVIAR]
-
+					<input type="image" id="btnEnviar" src="_imagens/botao-enviar.png" />
 				</form>
 
          </article>
@@ -128,6 +130,14 @@
 	</div>
 
 	<script lang="javascript" src="_javascript/funcoes.js"></script>
+	<script>
+		function calc_total() {
+			var qtd = parseInt(document.getElementById("cQtd").value)
+			tot = qtd * 1500;
+
+			document.getElementById("cTot").value = tot;
+		}
+	</script>
 
 </body>
 
